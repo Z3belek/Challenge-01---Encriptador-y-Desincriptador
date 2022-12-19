@@ -52,8 +52,12 @@ btnCopiar.addEventListener("click", () => {
 // Si no se ingresa texto, se muestra una imagen en bg-result, si se ingresa texto, se oculta la imagen y se muestra el texto encriptado
 btnEncriptar.addEventListener("click", () => {
     if (document.getElementById("result").value !== "") {
-        document.getElementById("bg-result").classList.add("bg-result-show");
-        document.getElementById("bg-result-none").classList.add("bg-result-none-hidden");
+        if (document.getElementById("result").value === "undefined") {
+            console.log("undefined");
+        } else {
+            document.getElementById("bg-result").classList.add("bg-result-show");
+            document.getElementById("bg-result-none").classList.add("bg-result-none-hidden");
+        }
     } else {
         document.getElementById("bg-result").classList.remove("bg-result-show");
         document.getElementById("bg-result-none").classList.remove("bg-result-none-hidden");
@@ -62,8 +66,12 @@ btnEncriptar.addEventListener("click", () => {
 
 btnDesencriptar.addEventListener("click", () => {
     if (document.getElementById("result").value !== "") {
-        document.getElementById("bg-result").classList.add("bg-result-show");
-        document.getElementById("bg-result-none").classList.add("bg-result-none-hidden");
+        if (document.getElementById("result").value === "undefined") {
+            console.log("undefined");
+        } else {
+            document.getElementById("bg-result").classList.add("bg-result-show");
+            document.getElementById("bg-result-none").classList.add("bg-result-none-hidden");
+        }
     } else {
         document.getElementById("bg-result").classList.remove("bg-result-show");
         document.getElementById("bg-result-none").classList.remove("bg-result-none-hidden");
@@ -133,6 +141,6 @@ function copiar(texto) {
 
 // Función para validar el texto ingresado
 function validarTexto(texto) {
-    const regex = new RegExp( /[^a-z ]/ );
+    const regex = new RegExp(/[^a-z ]/);
     return regex.test(texto);
 }
