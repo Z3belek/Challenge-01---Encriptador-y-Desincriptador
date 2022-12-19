@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encriptador y desencriptador de mensajes" />
+    <meta name="keywords" content="encriptador, desencriptador, encriptar, desencriptar, mensaje, texto" />
+    <meta name="author" content="Sebastian Ibañez" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Encriptador y desencriptador - Sebastian Ibañez</title>
+  </head>
+  <body>
+    <img src="./src/images/Logo.svg" class="logo" alt="Logo Alura" />
+    <div class="container">
+      <div class="input-text">
+        <textarea
+          class="encrypt-decrypt"
+          id="encrypt-decrypt"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+        <span class="advice">Solo letras minúsculas y sin acentos</span>
+        <div class="bt-button">
+          <button type="button" class="btn-encriptar" id="btn-encriptar">
+            Encriptar
+          </button>
+          <button type="button" class="btn-desencriptar" id="btn-desencriptar">
+            Desencriptar
+          </button>
+          <button type="button" class="btn-limpiar" id="btn-limpiar">
+            Limpiar
+          </button>
+        </div>
+      </div>
+      <div class="result-content">
+        <div class="bg-result" id="bg-result">
+          <textarea
+            class="result"
+            id="result"
+            placeholder="Resultado"
+            disabled
+          ></textarea>
+          <div class="btn-container">
+            <button class="btn-copiar" id="btn-copiar" type="button">
+              Copiar resultado
+            </button>
+          </div>
+        </div>
+        <div class="bg-result-none" id="bg-result-none">
+            <img src="./src/images/Muneco.svg" class="result-img" alt="Imagen, texto no ingresado">
+            <div class="text-rNone">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Por favor, ingrese un mensaje para poder encriptar o desencriptar</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright">
+      &copy; 2022 Sebastian Ibañez - Todos los derechos reservados
+    </footer>
+  </body>
+  <script type="text/javascript" src="./src/js/script.js"></script>
+</html>
